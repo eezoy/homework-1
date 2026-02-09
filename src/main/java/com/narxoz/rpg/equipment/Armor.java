@@ -20,4 +20,6 @@ public interface Armor {
     // - String getArmorType()
     // - any theme-specific properties?
 
+    String getName();
+
 }

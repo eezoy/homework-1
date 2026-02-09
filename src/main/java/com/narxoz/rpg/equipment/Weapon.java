@@ -20,4 +20,6 @@ public interface Weapon {
     // - String getWeaponType()
     // - any theme-specific properties?
 
+    String getName();
+
 }

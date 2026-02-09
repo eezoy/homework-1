@@ -1,5 +1,8 @@
 package com.narxoz.rpg.character;
 
+import com.narxoz.rpg.equipment.Armor;
+import com.narxoz.rpg.equipment.Weapon;
+
 /**
  * Example concrete implementation of a Character.
  *
@@ -16,30 +19,26 @@ package com.narxoz.rpg.character;
  * - Archer (balanced stats, ranged combat)
  * - (Optional) Additional classes: Rogue, Paladin, etc.
  */
-public class Warrior implements Character {
-
-    private String name;
-    private int health;
-    private int mana;
-    private int strength;
-    private int intelligence;
+public class Warrior extends Character {
 
     // TODO: Add fields for equipped weapon and armor
+    private Weapon equippedWeapon;
+    private Armor equippedArmor;
     // Think: Should Warrior know about its equipment?
 
-
+    
     public Warrior(String name) {
-        this.name = name;
+        super(name);
         // Warrior stats: high health and strength, low mana and intelligence
         this.health = 150;
         this.mana = 30;
         this.strength = 80;
         this.intelligence = 20;
+        this.type = CharacterType.WARRIOR;
     }
 
     // TODO: Implement methods from Character interface
     // You need to define those methods in Character interface first!
-
     // Example method structure:
     public String getName() {
         return name;
@@ -53,14 +52,45 @@ public class Warrior implements Character {
         System.out.println("Intelligence: " + intelligence);
     }
 
+    @Override
     public void useSpecialAbility() {
         System.out.println(name + " uses BERSERKER RAGE! Strength temporarily increased!");
     }
 
+    @Override
+    public int getHealth() {
+        return health;
+    }
+
+    @Override
+    public int getMana() {
+        return mana;
+    }
+
+    @Override
+    public int getStrength() {
+        return strength;
+    }
+    @Override
+    public int getIntelligence() {
+        return intelligence;
+    }
+        
     // TODO: Add equipment-related methods
     // Examples:
     // - void equipWeapon(Weapon weapon)
+     public void equipWeapon(Weapon weapon) {
+        this.equippedWeapon = weapon;
+        System.out.println(name + " equipped " + weapon.getName());
+    }
     // - void equipArmor(Armor armor)
+    public void equipArmor(Armor armor) {
+        this.equippedArmor = armor;
+        System.out.println(name + " equipped " + armor.getName());
+    }
     // - void displayEquipment()
-
+    public void displayEquipment() {
+        System.out.println("Equipped Weapon: " + equippedWeapon.getName());
+        System.out.println("Equipped Armor: " + equippedArmor.getName());
+    }
 }

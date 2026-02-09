@@ -1,5 +1,10 @@
 package com.narxoz.rpg;
 
+import com.narxoz.rpg.character.*;
+import com.narxoz.rpg.character.Character;
+import com.narxoz.rpg.factory.CharacterFactoryRegistry;
+
+
 /**
  * Main demonstration class for the RPG Character & Equipment System.
  *
@@ -18,6 +23,12 @@ package com.narxoz.rpg;
 public class Main {
     public static void main(String[] args) {
         System.out.println("=== RPG Character & Equipment System ===\n");
+
+        // test
+        CharacterFactoryRegistry registry = new CharacterFactoryRegistry();
+        Character warrior = registry.getFactory(CharacterType.WARRIOR).CharacterFabric("Kratos");
+        Character mage = registry.getFactory(CharacterType.MAGE).CharacterFabric("Severus");
+        Character archer = registry.getFactory(CharacterType.ARCHER).CharacterFabric("Robin Hood");
 
         // TODO: Demonstrate Factory Method Pattern
         // Create different character types (Warrior, Mage, Archer, etc.)

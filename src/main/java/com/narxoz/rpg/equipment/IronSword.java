@@ -41,6 +41,10 @@ public class IronSword implements Weapon {
         return damage;
     }
 
+    public String getName() {
+        return "Iron Sword";
+    }
+
     public String getWeaponInfo() {
         return "Iron Sword (Medieval) - A sturdy blade forged from iron";
     }
