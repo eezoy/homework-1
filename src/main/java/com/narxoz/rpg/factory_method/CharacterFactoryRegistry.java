@@ -1,4 +1,4 @@
-package com.narxoz.rpg.factory;
+package com.narxoz.rpg.factory_method;
 
 import java.util.*;
 
@@ -11,6 +11,7 @@ public class CharacterFactoryRegistry {
         creators.put(CharacterType.WARRIOR, new WarriorCharacterFactory());
         creators.put(CharacterType.MAGE, new MageCharacterFactory());
         creators.put(CharacterType.ARCHER, new ArcherCharacterFactory());
+        creators.put(CharacterType.TANK, new TankCharacterFactory());
     }
 
     public CharacterFactory getFactory(CharacterType type) {

@@ -3,21 +3,22 @@ package com.narxoz.rpg.character;
 import com.narxoz.rpg.equipment.Armor;
 import com.narxoz.rpg.equipment.Weapon;
 
-public class Archer extends Character {
-    public Archer(String name) {
+public class Tank extends Character {
+    public Tank(String name) {
         super(name);
-        this.health = 120;
-        this.mana = 80;
-        this.strength = 40;
-        this.intelligence = 30;
-        this.type = CharacterType.ARCHER;
+        this.health = 200;
+        this.mana = 20;
+        this.strength = 60;
+        this.intelligence = 20;
+        this.type = CharacterType.TANK;
     }
+
     public String getName() {
         return name;
     }
 
     public void displayStats() {
-        System.out.println("=== " + name + " (Archer) ===");
+        System.out.println("=== " + name + " (Tank) ===");
         System.out.println("Health: " + health);
         System.out.println("Mana: " + mana);
         System.out.println("Strength: " + strength);
@@ -26,7 +27,7 @@ public class Archer extends Character {
 
     @Override
     public void useSpecialAbility() {
-        System.out.println(name + " uses ARCHER RAIN OF ARROWS! Attack speed temporarily increased!");
+        System.out.println(name + " uses TANK STANCE! Health temporarily increased!");
     }
 
     @Override
@@ -47,14 +48,17 @@ public class Archer extends Character {
     public int getIntelligence() {
         return intelligence;
     }
+
     public void equipWeapon(Weapon weapon) {
         this.equippedWeapon = weapon;
         System.out.println(name + " equipped " + weapon.getName());
     }
+
     public void equipArmor(Armor armor) {
         this.equippedArmor = armor;
         System.out.println(name + " equipped " + armor.getName());
     }
+    
     public void displayEquipment() {
         System.out.println("Equipped Weapon: " + equippedWeapon.getName());
         System.out.println("Equipped Armor: " + equippedArmor.getName());

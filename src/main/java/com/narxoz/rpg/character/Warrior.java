@@ -22,8 +22,6 @@ import com.narxoz.rpg.equipment.Weapon;
 public class Warrior extends Character {
 
     // TODO: Add fields for equipped weapon and armor
-    private Weapon equippedWeapon;
-    private Armor equippedArmor;
     // Think: Should Warrior know about its equipment?
 
     
@@ -79,7 +77,7 @@ public class Warrior extends Character {
     // TODO: Add equipment-related methods
     // Examples:
     // - void equipWeapon(Weapon weapon)
-     public void equipWeapon(Weapon weapon) {
+    public void equipWeapon(Weapon weapon) {
         this.equippedWeapon = weapon;
         System.out.println(name + " equipped " + weapon.getName());
     }

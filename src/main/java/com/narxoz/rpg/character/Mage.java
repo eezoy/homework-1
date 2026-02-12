@@ -4,8 +4,6 @@ import com.narxoz.rpg.equipment.Armor;
 import com.narxoz.rpg.equipment.Weapon;
 
 public class Mage extends Character {
-    private Weapon equippedWeapon;
-    private Armor equippedArmor;
     public Mage(String name) {
         super(name);
         this.health = 100;
@@ -28,7 +26,7 @@ public class Mage extends Character {
 
     @Override
     public void useSpecialAbility() {
-        System.out.println(name + " uses MAGE FIREBALL! Mana temporarily increased!");
+        System.out.println(name + " uses ARCANE BLAST! Spell power temporarily increased!");
     }
 
     @Override

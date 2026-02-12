@@ -1,4 +1,4 @@
-package com.narxoz.rpg.factory;
+package com.narxoz.rpg.factory_method;
 
 import com.narxoz.rpg.character.Character;
 import com.narxoz.rpg.character.Mage;
